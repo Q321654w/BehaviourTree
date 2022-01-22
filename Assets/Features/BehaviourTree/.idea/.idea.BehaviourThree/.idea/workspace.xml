@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2783e680-8268-4f8a-aad5-6816f339e6b4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/OrCombiner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/CustomCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/CollisionNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/DelayNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/LoopNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/NodeDecorator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/TimedNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/9d/8945b8cb/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/NodeSequenceDecorator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/DebugNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/RandomNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/AlwaysDisabledNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/BehaviourThree.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/InvertedNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/INode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/AndCombiner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BehaviourThree/NodeCombiner.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/BehaviourThree/NodeWithStopwatch.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/Stopwatch.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/Timer.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/RepeatNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/TimedNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/LoopNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/NodeDecorator.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/InvertedNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/CombinerNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/AndCombine.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/Collision.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/PhysicCollider.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/TimerNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/DelayNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/NodeCombiner.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/OrCombiner.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/NodeSuquence.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/NodeSequence.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/NodeSequenceDecorator.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/BehaviourThree.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/CustomCollider.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/AndCombiner.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/CollisionNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/RandomNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/DebugNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/AlwaysDisabledNode.cs" />
+        <option value="$PROJECT_DIR$/BehaviourThree/Test.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="240VRDzEAGVT6ZBFMv6FY94kpQm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1642787172772">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642787172772" />
+  </component>
+</project>
