@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_BehaviourThree.-1592868156.00" t="ExcludeRecursive" />
-    <e p="C:\Users\PC\AppData\Roaming\JetBrains\Rider2020.1\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\PC\Desktop\Projects\BehaviourThree" t="IncludeRecursive">
+    <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_BehaviourThree.-318726392.00" t="ExcludeRecursive" />
+    <e p="C:\Users\PC\Desktop\Projects\BehaviourTree" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Features" t="Include">
@@ -15,6 +14,7 @@
             <e p="ConstantNode.cs" t="Include" />
             <e p="CustomCollider.cs" t="Include" />
             <e p="DebugNode.cs" t="Include" />
+            <e p="DelayedNode.cs" t="Include" />
             <e p="DelayNode.cs" t="Include" />
             <e p="INode.cs" t="Include" />
             <e p="InvertedNode.cs" t="Include" />

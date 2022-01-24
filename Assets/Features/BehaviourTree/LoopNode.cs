@@ -20,13 +20,13 @@
         public override bool Execute()
         {
             if (ChildNode.Execute())
-               return true;
+                return true;
 
             if (_currentLoop >= _loops)
                 return false;
 
             _currentLoop++;
-            
+
             return true;
         }
 

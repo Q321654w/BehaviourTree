@@ -14,7 +14,7 @@ namespace BehaviourTree
             var customCollider = Instantiate(_colliderPrefab);
             var startNode = new CollisionNode(customCollider);
             var alwaysDisabledNode = new ConstantNode(false);
-            var secondNode = new DelayNode(alwaysDisabledNode, new Timer(3));
+            var secondNode = new DelayedNode(alwaysDisabledNode, new Timer(3));
             var thirdNode = new DebugNode();
 
             var nodes = new Dictionary<INode, IEnumerable<INode>>();

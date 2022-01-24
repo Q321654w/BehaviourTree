@@ -2,13 +2,13 @@
 
 namespace BehaviourTree
 {
-    public class DelayNode : INode
+    public class DelayedNode : NodeDecorator
     {
         private readonly Timer _timer;
 
         private bool _thisNodeIsActive;
 
-        public DelayNode(Timer timer)
+        public DelayedNode(INode childNode, Timer timer) : base(childNode)
         {
             _timer = timer;
             _thisNodeIsActive = true;
@@ -21,27 +21,32 @@ namespace BehaviourTree
             _timer.Stop();
         }
 
-        public void Enter()
+        public override void Enter()
         {
+            ChildNode.Enter();
             _timer.Resume();
         }
 
-        public bool Execute()
+        private void Reset()
+        {
+            _timer.Reset();
+            _thisNodeIsActive = true;
+        }
+
+        public override bool Execute()
         {
             if (_thisNodeIsActive)
             {
                 _timer.Update(Time.deltaTime);
                 return true;
             }
+
+            var childNodeIsActive = ChildNode.Execute();
+
+            if (!childNodeIsActive)
+                Reset();
             
-            Reset();
-            return false;
-        }
-        
-        private void Reset()
-        {
-            _timer.Reset();
-            _thisNodeIsActive = true;
+            return childNodeIsActive;
         }
     }
 }
