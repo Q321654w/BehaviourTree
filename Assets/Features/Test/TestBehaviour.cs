@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using BehaviourTrees;
 using UnityEngine;
 
-namespace BehaviourTree
+namespace Features.Test
 {
     public class TestBehaviour : MonoBehaviour
     {
@@ -13,8 +14,7 @@ namespace BehaviourTree
         {
             var customCollider = Instantiate(_colliderPrefab);
             var startNode = new CollisionNode(customCollider);
-            var alwaysDisabledNode = new ConstantNode(false);
-            var secondNode = new DelayedNode(alwaysDisabledNode, new Timer(3));
+            var secondNode = new DelayNode(new Timer(3));
             var thirdNode = new DebugNode();
 
             var nodes = new Dictionary<INode, IEnumerable<INode>>();
@@ -26,14 +26,16 @@ namespace BehaviourTree
             {
                 thirdNode
             });
+            nodes.Add(thirdNode, new List<INode>());
 
             _behaviourTree = new BehaviourTree(nodes, startNode);
-            _behaviourTree.Enter();
+            _behaviourTree.Start();
         }
 
         private void Update()
         {
-            _behaviourTree.Execute();
+            if (_behaviourTree.IsActive())
+                _behaviourTree.Update();
         }
     }
 }

@@ -7,14 +7,14 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Features" t="Include">
-          <e p="BehaviourTree" t="Include">
+          <e p="BehaviourTrees" t="Include">
             <e p="AndCombiner.cs" t="Include" />
+            <e p="BehaviorTreeNode.cs" t="Include" />
             <e p="BehaviourTree.cs" t="Include" />
             <e p="CollisionNode.cs" t="Include" />
             <e p="ConstantNode.cs" t="Include" />
             <e p="CustomCollider.cs" t="Include" />
             <e p="DebugNode.cs" t="Include" />
-            <e p="DelayedNode.cs" t="Include" />
             <e p="DelayNode.cs" t="Include" />
             <e p="INode.cs" t="Include" />
             <e p="InvertedNode.cs" t="Include" />
@@ -24,7 +24,6 @@
             <e p="NodeQueue.cs" t="Include" />
             <e p="NodeSequenceDecorator.cs" t="Include" />
             <e p="OrCombiner.cs" t="Include" />
-            <e p="RandomNode.cs" t="Include" />
             <e p="TimedNode.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="WhileAllNode.cs" t="Include" />
