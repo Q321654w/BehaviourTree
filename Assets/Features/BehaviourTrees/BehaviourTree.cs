@@ -1,22 +1,23 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using Features.BehaviourTrees;
 
 namespace BehaviourTrees
 {
     public class BehaviourTree
     {
-        private readonly Dictionary<INode, IEnumerable<INode>> _nodes;
+        private readonly IDictionary<INode, IEnumerable<INode>> _nodes;
         private readonly INode _startNode;
 
         private INode _currentNode;
         private bool _isEnded;
 
-        public BehaviourTree(IEnumerable<KeyValuePair<INode, IEnumerable<INode>>> nodes, INode startNode)
+        public BehaviourTree(IDictionary<INode, IEnumerable<INode>> nodes, INode startNode)
         {
             _startNode = startNode;
             _currentNode = startNode;
-            _nodes = nodes.ToDictionary(key => key.Key, element => element.Value);
+            _nodes = nodes;
         }
 
         public void Start()
@@ -32,7 +33,7 @@ namespace BehaviourTrees
 
         public void Update()
         {
-            if (_currentNode.IsActive())
+            if (_currentNode.Active())
             {
                 _currentNode.Execute();
                 return;
@@ -49,7 +50,7 @@ namespace BehaviourTrees
             {
                 i++;
                 
-                if (!node.IsActive())
+                if (!node.Active())
                     continue;
 
                 _currentNode = node;

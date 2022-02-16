@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_BehaviourTree.2117826658.00" t="ExcludeRecursive" />
+    <e p="C:\Users\PC\Desktop\Projects\BehaviourTree" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Features" t="Include">
+          <e p="BehaviourTrees" t="Include">
+            <e p=".idea" t="Include">
+              <e p=".idea.BehaviourThree" t="Include">
+                <e p=".idea" t="Include">
+                  <e p=".idea.BehaviourThree.iml" t="Include" />
+                  <e p=".idea.BehaviourThree.iml.meta" t="Include" />
+                  <e p="contentModel.xml" t="Include" />
+                  <e p="contentModel.xml.meta" t="Include" />
+                  <e p="encodings.xml" t="Include" />
+                  <e p="encodings.xml.meta" t="Include" />
+                  <e p="indexLayout.xml" t="Include" />
+                  <e p="indexLayout.xml.meta" t="Include" />
+                  <e p="modules.xml" t="Include" />
+                  <e p="modules.xml.meta" t="Include" />
+                  <e p="projectSettingsUpdater.xml" t="Include" />
+                  <e p="projectSettingsUpdater.xml.meta" t="Include" />
+                  <e p="workspace.xml" t="Include" />
+                  <e p="workspace.xml.meta" t="Include" />
+                </e>
+                <e p=".idea.meta" t="Include" />
+                <e p="riderModule.iml" t="Include" />
+                <e p="riderModule.iml.meta" t="Include" />
+              </e>
+              <e p=".idea.BehaviourThree.meta" t="Include" />
+            </e>
+            <e p=".idea.meta" t="Include" />
+            <e p="AndCombiner.cs" t="Include" />
+            <e p="AndCombiner.cs.meta" t="Include" />
+            <e p="BehaviorTreeNode.cs" t="Include" />
+            <e p="BehaviorTreeNode.cs.meta" t="Include" />
+            <e p="BehaviourTree.cs" t="Include" />
+            <e p="BehaviourTree.cs.meta" t="Include" />
+            <e p="CollisionNode.cs" t="Include" />
+            <e p="CollisionNode.cs.meta" t="Include" />
+            <e p="ConstantNode.cs" t="Include" />
+            <e p="ConstantNode.cs.meta" t="Include" />
+            <e p="CustomCollider.cs" t="Include" />
+            <e p="CustomCollider.cs.meta" t="Include" />
+            <e p="DebugNode.cs" t="Include" />
+            <e p="DebugNode.cs.meta" t="Include" />
+            <e p="DelayNode.cs" t="Include" />
+            <e p="DelayNode.cs.meta" t="Include" />
+            <e p="INode.cs" t="Include" />
+            <e p="INode.cs.meta" t="Include" />
+            <e p="INodes" t="Include">
+              <e p="Implementations" t="Include">
+                <e p="AnimatorNodes" t="Include">
+                  <e p="AnimatorBoolChangeNode.cs" t="Include" />
+                  <e p="AnimatorFloatChangeNode.cs" t="Include" />
+                  <e p="AnimatorIntChangeNode.cs" t="Include" />
+                  <e p="EmptyNode.cs" t="Include" />
+                  <e p="IValue.cs" t="Include" />
+                </e>
+                <e p="BehaviorTreeNode.cs" t="Include" />
+                <e p="Combiners" t="Include">
+                  <e p="AndCombiner.cs" t="Include" />
+                  <e p="NodeCombiner.cs" t="Include" />
+                  <e p="OrCombiner.cs" t="Include" />
+                </e>
+                <e p="DebugNodes" t="Include">
+                  <e p="CollisionNode.cs" t="Include" />
+                  <e p="ConstantNode.cs" t="Include" />
+                  <e p="CustomCollider.cs" t="Include" />
+                  <e p="DebugNode.cs" t="Include" />
+                </e>
+                <e p="DelayNode.cs" t="Include" />
+                <e p="InvertedNode.cs" t="Include" />
+                <e p="LoopNode.cs" t="Include" />
+                <e p="NodeCollections" t="Include">
+                  <e p="NodeSequenceDecorator.cs" t="Include" />
+                  <e p="WhileAllNode.cs" t="Include" />
+                  <e p="WhileAnyNode.cs" t="Include" />
+                </e>
+                <e p="NodeDecorator.cs" t="Include" />
+                <e p="TimedNode.cs" t="Include" />
+                <e p="Timer.cs" t="Include" />
+              </e>
+              <e p="INode.cs" t="Include" />
+            </e>
+            <e p="InvertedNode.cs" t="Include" />
+            <e p="InvertedNode.cs.meta" t="Include" />
+            <e p="LoopNode.cs" t="Include" />
+            <e p="LoopNode.cs.meta" t="Include" />
+            <e p="NodeCombiner.cs" t="Include" />
+            <e p="NodeCombiner.cs.meta" t="Include" />
+            <e p="NodeDecorator.cs" t="Include" />
+            <e p="NodeDecorator.cs.meta" t="Include" />
+            <e p="NodeQueue.cs" t="Include" />
+            <e p="NodeQueue.cs.meta" t="Include" />
+            <e p="NodeSequenceDecorator.cs" t="Include" />
+            <e p="NodeSequenceDecorator.cs.meta" t="Include" />
+            <e p="OrCombiner.cs" t="Include" />
+            <e p="OrCombiner.cs.meta" t="Include" />
+            <e p="TimedNode.cs" t="Include" />
+            <e p="TimedNode.cs.meta" t="Include" />
+            <e p="Timer.cs" t="Include" />
+            <e p="Timer.cs.meta" t="Include" />
+            <e p="WhileAllNode.cs" t="Include" />
+            <e p="WhileAllNode.cs.meta" t="Include" />
+            <e p="WhileAnyNode.cs" t="Include" />
+            <e p="WhileAnyNode.cs.meta" t="Include" />
+          </e>
+          <e p="Test" t="Include">
+            <e p="TestBehaviour.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="BehaviourTree.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
