@@ -2,9 +2,17 @@
 {
     public interface INode
     {
-        bool Active();
+        Status ExecutionStatus();
         void Enter();
         void Execute();
         void Exit();
+    }
+
+    public enum Status
+    {
+        Idle,
+        Running,
+        Failure,
+        Success,
     }
 }

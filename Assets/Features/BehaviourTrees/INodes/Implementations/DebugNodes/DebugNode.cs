@@ -5,21 +5,21 @@ using UnityEngine;
 {
     public class DebugNode : INode
     {
-        private bool _isActive;
+        private Status _status;
 
         public DebugNode()
         {
-            _isActive = true;
+            _status = Status.Idle;
         }
-
-        public bool Active()
+        
+        public Status ExecutionStatus()
         {
-            return _isActive;
+            return _status;
         }
 
         public void Enter()
         {
-            _isActive = false;
+            _status = Status.Success;
             Debug.Log("Debug Node Entered");
         }
 
@@ -29,7 +29,7 @@ using UnityEngine;
 
         public void Exit()
         {
-            _isActive = true;
+            _status = Status.Idle;
         }
     }
 }

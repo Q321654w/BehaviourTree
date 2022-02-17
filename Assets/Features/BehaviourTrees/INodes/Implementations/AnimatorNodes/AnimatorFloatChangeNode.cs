@@ -1,4 +1,4 @@
-﻿using BehaviourTrees;
+﻿using System;
 using Features.BehaviourTrees;
 using UnityEngine;
 
@@ -13,6 +13,8 @@ namespace MVQ
         
         private float _lastValue;
 
+        private const float TOLERANCE = 0.01f;
+
         public AnimatorFloatChangeNode(IValue<float> value, string animationId, float defaultValue, Animator animator)
         {
             _value = value;
@@ -21,26 +23,22 @@ namespace MVQ
             _animator = animator;
         }
 
+        public Status ExecutionStatus()
+        {
+            var changed = Math.Abs(_lastValue - _value.Value()) > TOLERANCE;
+            return changed ? Status.Idle : Status.Success;
+        }
+
         public void Enter()
         {
             Execute();
         }
 
-        public bool Active()
-        {
-            var currentValue = _value.Value();
-            var active = _lastValue.CompareTo(currentValue) != 0;
-            
-            _lastValue = currentValue;
-            
-            return active;
-        }
-
         public void Execute()
         {
             var currentValue = _value.Value();
-
             _animator.SetFloat(_sourceId, currentValue);
+            _lastValue = currentValue;
         }
 
         public void Exit()

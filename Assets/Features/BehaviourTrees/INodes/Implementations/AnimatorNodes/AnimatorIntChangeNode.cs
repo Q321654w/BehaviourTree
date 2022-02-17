@@ -1,5 +1,4 @@
-﻿using BehaviourTrees;
-using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees;
 using UnityEngine;
 
 namespace MVQ
@@ -25,26 +24,22 @@ namespace MVQ
             _animator = animator;
         }
 
+        public Status ExecutionStatus()
+        {
+            var changed = _lastValue != _value.Value();
+            return changed ? Status.Idle : Status.Success;
+        }
+
         public void Enter()
         {
             Execute();
         }
 
-        public bool Active()
-        {
-            var currentValue = _value.Value();
-            var active = _lastValue.CompareTo(currentValue) > 0;
-            
-            _lastValue = currentValue;
-            
-            return active;
-        }
-
         public void Execute()
         {
             var currentValue = _value.Value();
-
             _animator.SetInteger(_sourceId, currentValue);
+            _lastValue = currentValue;
         }
 
         public void Exit()

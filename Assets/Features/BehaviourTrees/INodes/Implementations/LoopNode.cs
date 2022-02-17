@@ -13,9 +13,12 @@ namespace BehaviourTrees
             _currentLoop = 0;
         }
 
-        public override bool Active()
+        public override Status ExecutionStatus()
         {
-            return _currentLoop >= _loops;
+            if (_currentLoop <= _loops)
+                return Status.Running;
+
+            return ChildNode.ExecutionStatus();
         }
 
         public override void Enter()
@@ -26,7 +29,8 @@ namespace BehaviourTrees
 
         public override void Execute()
         {
-            if (!ChildNode.Active())
+            var childStatus = ChildNode.ExecutionStatus();
+            if (childStatus != Status.Running && childStatus != Status.Idle)
             {
                 _currentLoop++;
                 ChildNode.Exit();

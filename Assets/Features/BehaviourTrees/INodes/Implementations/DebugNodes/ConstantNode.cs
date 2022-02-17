@@ -4,16 +4,16 @@
 {
     public class ConstantNode : INode
     {
-        private readonly bool _isActive;
+        private readonly Status _status;
 
         public ConstantNode(bool isActive)
         {
-            _isActive = isActive;
+            _status = isActive ? Status.Success : Status.Failure;
         }
 
-        public bool Active()
+        public Status ExecutionStatus()
         {
-            return _isActive;
+            return _status;
         }
 
         public void Enter()
@@ -28,7 +28,7 @@
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

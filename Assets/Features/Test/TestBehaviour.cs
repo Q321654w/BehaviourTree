@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using BehaviourTrees;
+﻿using BehaviourTrees;
 using Features.BehaviourTrees;
 using UnityEngine;
+using WaitWhile = BehaviourTrees.WaitWhile;
 
 namespace Features.Test
 {
@@ -14,28 +14,24 @@ namespace Features.Test
         private void Awake()
         {
             var customCollider = Instantiate(_colliderPrefab);
-            var startNode = new CollisionNode(customCollider);
+            var firstNode = new CollisionNode(customCollider);
+            var waitWhile = new WaitWhile(firstNode);
+
             var secondNode = new DelayNode(new Timer(3));
             var thirdNode = new DebugNode();
 
-            var nodes = new Dictionary<INode, IEnumerable<INode>>();
-            nodes.Add(startNode, new List<INode>()
+            var sequence = new Sequence(new INode[]
             {
-                secondNode
+                waitWhile, secondNode, thirdNode
             });
-            nodes.Add(secondNode, new List<INode>()
-            {
-                thirdNode
-            });
-            nodes.Add(thirdNode, new List<INode>());
 
-            _behaviourTree = new BehaviourTree(nodes, startNode);
+            _behaviourTree = new BehaviourTree(sequence);
             _behaviourTree.Start();
         }
 
         private void Update()
         {
-            if (_behaviourTree.IsActive())
+            if (_behaviourTree.Status() == Status.Running)
                 _behaviourTree.Update();
         }
     }

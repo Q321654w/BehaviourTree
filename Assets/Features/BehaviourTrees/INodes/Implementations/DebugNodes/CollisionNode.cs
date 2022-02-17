@@ -6,33 +6,35 @@ namespace BehaviourTrees
     public class CollisionNode : INode
     {
         private readonly CustomCollider _collider;
-        private bool _isActive;
+        private Status _status;
 
         public CollisionNode(CustomCollider collider)
         {
             _collider = collider;
-            _isActive = true;
+            _status = Status.Idle;
+            
+            _collider.Collided += OnCollided;
+            _collider.CollisionBreaked += OnCollisionBraked;
         }
 
         private void OnCollisionBraked(Collision obj)
         {
-            _isActive = true;
+            _status = Status.Failure;
         }
         
         private void OnCollided(Collision obj)
         {
-            _isActive = false;
+            _status = Status.Success;
         }
 
-        public bool Active()
+        public Status ExecutionStatus()
         {
-            return _isActive;
+            return _status;
         }
 
         public void Enter()
         {
-            _collider.Collided += OnCollided;
-            _collider.CollisionBreaked += OnCollisionBraked;
+            _status = Status.Running;
         }
         
         public void Execute()
@@ -41,8 +43,7 @@ namespace BehaviourTrees
 
         public void Exit()
         {
-            _collider.Collided -= OnCollided;
-            _collider.CollisionBreaked -= OnCollisionBraked;
+            _status = Status.Idle;
         }
     }
 }

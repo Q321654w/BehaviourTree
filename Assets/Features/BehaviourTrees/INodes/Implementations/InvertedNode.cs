@@ -8,9 +8,16 @@ namespace BehaviourTrees
         {
         }
 
-        public override bool Active()
+        public override Status ExecutionStatus()
         {
-            return !ChildNode.Active();
+            var childStatus = ChildNode.ExecutionStatus();
+
+            return childStatus switch
+            {
+                Status.Failure => Status.Success,
+                Status.Success => Status.Failure,
+                _ => childStatus
+            };
         }
 
         public override void Enter()
@@ -22,7 +29,7 @@ namespace BehaviourTrees
         {
             ChildNode.Execute();
         }
-        
+
         public override void Exit()
         {
             ChildNode.Exit();

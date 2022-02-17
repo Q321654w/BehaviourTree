@@ -10,9 +10,9 @@ namespace BehaviourTrees
         {
             ChildNode = childNode;
         }
-
-        public abstract bool Active();
         
+        public abstract Status ExecutionStatus();
+
         public abstract void Enter();
         public abstract void Execute();
         public abstract void Exit();

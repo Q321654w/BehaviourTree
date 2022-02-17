@@ -1,37 +1,44 @@
-﻿﻿using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees;
 
 namespace BehaviourTrees
 {
     public class BehaviorTreeNode : INode
     {
         private readonly BehaviourTree _behaviourTree;
-        private bool _isActive;
+        private Status _status;
 
         public BehaviorTreeNode(BehaviourTree behaviourTree)
         {
             _behaviourTree = behaviourTree;
+            _status = Status.Idle;
         }
 
-        public bool Active()
+        public Status ExecutionStatus()
         {
-            return _behaviourTree.IsActive();
+            return _status;
         }
 
         public void Enter()
         {
             _behaviourTree.Start();
-            _isActive = true;
+            _status = Status.Running;
         }
 
         public void Execute()
         {
-            if (_isActive)
+            if (_behaviourTree.Status() == Status.Running)
+            {
                 _behaviourTree.Update();
+                return;
+            }
+
+            _status = _behaviourTree.Status();
         }
 
         public void Exit()
         {
             _behaviourTree.Reset();
+            _status = Status.Idle;
         }
     }
 }

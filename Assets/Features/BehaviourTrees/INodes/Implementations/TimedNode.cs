@@ -7,30 +7,35 @@ namespace BehaviourTrees
     {
         private readonly Timer _timer;
 
-        private bool _isActive;
+        private Status _status;
 
         public TimedNode(INode childNode, Timer timer) : base(childNode)
         {
-            _isActive = true;
+            _status = Status.Idle;
             _timer = timer;
             _timer.TimIsUp += OnTimeIsUp;
         }
 
         private void OnTimeIsUp()
         {
-            _isActive = false;
+            _status = Status.Success;
             _timer.Stop();
         }
-
-        public override bool Active()
+        
+        public override Status ExecutionStatus()
         {
-            return _isActive;
+            var childStatus = ChildNode.ExecutionStatus();
+            if (childStatus == Status.Success && childStatus == Status.Failure)
+                return childStatus;
+
+            return _status;
         }
 
         public override void Enter()
         {
             ChildNode.Enter();
             _timer.Resume();
+            _status = Status.Running;
         }
 
         public override void Execute()
@@ -45,7 +50,7 @@ namespace BehaviourTrees
 
         private void Reset()
         {
-            _isActive = true;
+            _status = Status.Idle;
             _timer.Reset();
         }
     }

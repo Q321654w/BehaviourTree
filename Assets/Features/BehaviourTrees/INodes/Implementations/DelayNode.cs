@@ -6,29 +6,29 @@ namespace BehaviourTrees
     public class DelayNode : INode
     {
         private readonly Timer _timer;
-
-        private bool _isActive;
+        private Status _status;
 
         public DelayNode(Timer timer)
         {
             _timer = timer;
-            _isActive = true;
+            _status = Status.Idle;
             _timer.TimIsUp += OnTimeIsUp;
         }
 
         private void OnTimeIsUp()
         {
-            _isActive = false;
+            _status = Status.Success;
             _timer.Stop();
         }
 
-        public bool Active()
+        public Status ExecutionStatus()
         {
-            return _isActive;
+            return _status;
         }
 
         public void Enter()
         {
+            _status = Status.Running;
             _timer.Resume();
         }
 
@@ -45,7 +45,7 @@ namespace BehaviourTrees
         private void Reset()
         {
             _timer.Reset();
-            _isActive = true;
+            _status = Status.Idle;
         }
     }
 }
