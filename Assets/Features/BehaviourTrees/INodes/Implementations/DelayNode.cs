@@ -10,8 +10,8 @@ namespace BehaviourTrees
 
         public DelayNode(Timer timer)
         {
-            _timer = timer;
             _status = Status.Idle;
+            _timer = timer;
             _timer.TimIsUp += OnTimeIsUp;
         }
 

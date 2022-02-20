@@ -25,6 +25,26 @@ namespace BehaviourTrees
             _enumerator = Nodes.GetEnumerator();
             MoveToNextNode();
         }
+        
+        public override void Execute()
+        {
+            var currentNodeStatus = _currentNode.ExecutionStatus();
+            
+            switch (currentNodeStatus)
+            {
+                case Status.Running:
+                    _currentNode.Execute();
+                    break;
+                
+                case Status.Success:
+                    MoveToNextNode();
+                    break;
+                
+                case Status.Failure:
+                    _status = Status.Failure;
+                    break;
+            }
+        }
 
         private void MoveToNextNode()
         {
@@ -37,24 +57,7 @@ namespace BehaviourTrees
             _currentNode = _enumerator.Current;
             _currentNode.Enter();
         }
-
-        public override void Execute()
-        {
-            var currentNodeStatus = _currentNode.ExecutionStatus();
-            if (currentNodeStatus == Status.Running)
-            {
-                _currentNode.Execute();
-                return;
-            }
-
-            if (currentNodeStatus == Status.Success)
-                MoveToNextNode();
-
-            if (currentNodeStatus == Status.Failure)
-                _status = Status.Failure;
-
-        }
-
+        
         public override void Exit()
         {
             foreach (var node in Nodes)

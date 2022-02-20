@@ -1,12 +1,13 @@
-﻿using Features.BehaviourTrees;
+﻿using BehaviourTrees;
+using Features.BehaviourTrees;
 
 namespace BehaviourTrees
 {
-    public class WaitWhile : NodeDecorator
+    public class WaitUntilFailure : NodeDecorator
     {
         private Status _status;
 
-        public WaitWhile(INode childNode) : base(childNode)
+        public WaitUntilFailure(INode childNode) : base(childNode)
         {
             _status = Status.Idle;
         }
@@ -25,10 +26,11 @@ namespace BehaviourTrees
         public override void Execute()
         {
             var childStatus = ChildNode.ExecutionStatus();
-            ChildNode.Execute();
-            
-            if (childStatus != Status.Idle && childStatus != Status.Running)
+
+            if (childStatus == Status.Failure)
                 _status = childStatus;
+
+            ChildNode.Execute();
         }
 
         public override void Exit()

@@ -11,8 +11,7 @@ namespace BehaviourTrees
         {
             Nodes = nodes;
         }
-
-
+        
         public abstract Status ExecutionStatus();
 
         public abstract void Enter();

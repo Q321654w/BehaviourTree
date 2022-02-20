@@ -7,12 +7,4 @@
         void Execute();
         void Exit();
     }
-
-    public enum Status
-    {
-        Idle,
-        Running,
-        Failure,
-        Success,
-    }
 }

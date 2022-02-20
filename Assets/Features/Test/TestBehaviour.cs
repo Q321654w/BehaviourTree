@@ -1,7 +1,6 @@
 ﻿using BehaviourTrees;
 using Features.BehaviourTrees;
 using UnityEngine;
-using WaitWhile = BehaviourTrees.WaitWhile;
 
 namespace Features.Test
 {
@@ -15,7 +14,7 @@ namespace Features.Test
         {
             var customCollider = Instantiate(_colliderPrefab);
             var firstNode = new CollisionNode(customCollider);
-            var waitWhile = new WaitWhile(firstNode);
+            var waitWhile = new WaitUntilFailure(firstNode);
 
             var secondNode = new DelayNode(new Timer(3));
             var thirdNode = new DebugNode();

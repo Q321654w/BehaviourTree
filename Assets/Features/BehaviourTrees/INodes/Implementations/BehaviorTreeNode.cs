@@ -20,18 +20,15 @@ namespace BehaviourTrees
 
         public void Enter()
         {
-            _behaviourTree.Start();
             _status = Status.Running;
+            _behaviourTree.Start();
         }
 
         public void Execute()
         {
             if (_behaviourTree.Status() == Status.Running)
-            {
                 _behaviourTree.Update();
-                return;
-            }
-
+            
             _status = _behaviourTree.Status();
         }
 

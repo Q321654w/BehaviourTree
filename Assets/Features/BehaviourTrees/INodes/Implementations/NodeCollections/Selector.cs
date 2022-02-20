@@ -28,34 +28,46 @@ namespace BehaviourTrees
         public override void Execute()
         {
             var currentNodeStatus = _currentNode.ExecutionStatus();
-            if (currentNodeStatus == Status.Running)
+            switch (currentNodeStatus)
             {
-                _currentNode.Execute();
-                return;
+                case Status.Running:
+                    _currentNode.Execute();
+                    break;
+                
+                case Status.Success:
+                case Status.Failure:
+                    MoveToNextNode();
+                    break;
             }
-
-            if (currentNodeStatus == Status.Success || currentNodeStatus == Status.Failure)
-                MoveToNextNode();
         }
         
         private void MoveToNextNode()
         {
-            if (!_enumerator.MoveNext())
-            {
-                bool isAllFailure = true;
+            var canMoveNext = _enumerator.MoveNext();
+            
+            if (canMoveNext)
+                ChangeNode();
+            else
+                _status = CalculateStatus();
+        }
 
-                foreach (var node in Nodes)
-                {
-                    var nodeStatus = node.ExecutionStatus();
-                    isAllFailure = isAllFailure && nodeStatus == Status.Failure;
-                }
-
-                _status = isAllFailure ? Status.Failure : Status.Success;
-                return;
-            }
-
+        private void ChangeNode()
+        {
             _currentNode = _enumerator.Current;
             _currentNode.Enter();
+        }
+
+        private Status CalculateStatus()
+        {
+            foreach (var node in Nodes)
+            {
+                var nodeStatus = node.ExecutionStatus();
+                
+                if (nodeStatus == Status.Success)
+                    return Status.Success;
+            }
+
+            return Status.Failure;
         }
 
         public override void Exit()
