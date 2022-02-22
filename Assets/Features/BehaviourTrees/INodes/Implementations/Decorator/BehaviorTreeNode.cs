@@ -1,6 +1,4 @@
-﻿using Features.BehaviourTrees;
-
-namespace BehaviourTrees
+﻿namespace Features.BehaviourTrees.INodes.Implementations.Decorator
 {
     public class BehaviorTreeNode : INode
     {
@@ -28,7 +26,7 @@ namespace BehaviourTrees
         {
             if (_behaviourTree.Status() == Status.Running)
                 _behaviourTree.Update();
-            
+
             _status = _behaviourTree.Status();
         }
 

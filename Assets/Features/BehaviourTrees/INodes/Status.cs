@@ -1,4 +1,4 @@
-﻿namespace Features.BehaviourTrees
+﻿namespace Features.BehaviourTrees.INodes
 {
     public enum Status
     {

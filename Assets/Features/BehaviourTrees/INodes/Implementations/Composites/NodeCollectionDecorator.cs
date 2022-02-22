@@ -1,7 +1,6 @@
-﻿﻿using System.Collections.Generic;
- using Features.BehaviourTrees;
+﻿using System.Collections.Generic;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.Composites
 {
     public abstract class NodeCollectionDecorator : INode
     {

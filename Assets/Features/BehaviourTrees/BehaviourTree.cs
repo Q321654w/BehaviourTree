@@ -1,6 +1,6 @@
-﻿using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees.INodes;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees
 {
     public class BehaviourTree
     {

@@ -1,7 +1,7 @@
-﻿using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees.Common;
 using UnityEngine;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.DebugNodes
 {
     public class CollisionNode : INode
     {
@@ -14,7 +14,7 @@ namespace BehaviourTrees
             _status = Status.Idle;
             
             _collider.Collided += OnCollided;
-            _collider.CollisionBreaked += OnCollisionBraked;
+            _collider.CollisionBraked += OnCollisionBraked;
         }
 
         private void OnCollisionBraked(Collision obj)

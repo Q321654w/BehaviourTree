@@ -1,13 +1,13 @@
-﻿﻿using System;
+﻿using System;
 using UnityEngine;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.Common
 {
     [RequireComponent(typeof(Collider))]
     public class CustomCollider : MonoBehaviour
     {
         public event Action<Collision> Collided;
-        public event Action<Collision> CollisionBreaked;
+        public event Action<Collision> CollisionBraked;
         
         private void OnCollisionEnter(Collision other)
         {
@@ -16,7 +16,7 @@ namespace BehaviourTrees
 
         private void OnCollisionExit(Collision other)
         {
-            CollisionBreaked?.Invoke(other);
+            CollisionBraked?.Invoke(other);
         }
     }
 }

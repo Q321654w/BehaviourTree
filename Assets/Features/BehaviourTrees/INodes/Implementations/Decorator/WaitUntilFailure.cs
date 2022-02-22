@@ -1,7 +1,4 @@
-﻿using BehaviourTrees;
-using Features.BehaviourTrees;
-
-namespace BehaviourTrees
+﻿namespace Features.BehaviourTrees.INodes.Implementations.Decorator
 {
     public class WaitUntilFailure : NodeDecorator
     {

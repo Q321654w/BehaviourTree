@@ -1,7 +1,7 @@
-﻿using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees.Common;
 using UnityEngine;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.Decorator
 {
     public class TimedNode : NodeDecorator
     {
@@ -21,7 +21,7 @@ namespace BehaviourTrees
             _status = Status.Success;
             _timer.Stop();
         }
-        
+
         public override Status ExecutionStatus()
         {
             var childStatus = ChildNode.ExecutionStatus();

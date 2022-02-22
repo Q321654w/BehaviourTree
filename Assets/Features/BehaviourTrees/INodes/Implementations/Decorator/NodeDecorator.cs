@@ -1,6 +1,4 @@
-﻿using Features.BehaviourTrees;
-
-namespace BehaviourTrees
+﻿namespace Features.BehaviourTrees.INodes.Implementations.Decorator
 {
     public abstract class NodeDecorator : INode
     {
@@ -10,7 +8,7 @@ namespace BehaviourTrees
         {
             ChildNode = childNode;
         }
-        
+
         public abstract Status ExecutionStatus();
 
         public abstract void Enter();

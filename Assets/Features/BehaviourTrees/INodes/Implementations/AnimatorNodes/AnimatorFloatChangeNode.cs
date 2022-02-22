@@ -1,8 +1,7 @@
 ﻿using System;
-using Features.BehaviourTrees;
 using UnityEngine;
 
-namespace MVQ
+namespace Features.BehaviourTrees.INodes.Implementations.AnimatorNodes
 {
     public class AnimatorFloatChangeNode : INode
     {
@@ -10,7 +9,7 @@ namespace MVQ
         private readonly string _sourceId;
         private readonly float _defaultValue;
         private readonly Animator _animator;
-        
+
         private float _lastValue;
 
         private const float TOLERANCE = 0.01f;
@@ -26,7 +25,7 @@ namespace MVQ
         public Status ExecutionStatus()
         {
             var changed = Math.Abs(_lastValue - _value.Value()) > TOLERANCE;
-            return changed ? Status.Idle : Status.Success;
+            return changed ? Status.Success : Status.Running;
         }
 
         public void Enter()

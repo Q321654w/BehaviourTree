@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using Features.BehaviourTrees;
+﻿﻿using System.Collections.Generic;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.Composites
 {
     public class ParallelComplete : NodeCollectionDecorator
     {
@@ -27,8 +26,7 @@ namespace BehaviourTrees
         public override void Execute()
         {
             var enumerator = Nodes.GetEnumerator();
-            var status = Status.Success;
-            
+
             while (enumerator.MoveNext())
             {
                 var currentNode = enumerator.Current;

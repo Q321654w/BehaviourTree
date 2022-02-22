@@ -1,7 +1,6 @@
-﻿using Features.BehaviourTrees;
-using UnityEngine;
+﻿using UnityEngine;
 
- namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.Actions
 {
     public class DebugNode : INode
     {

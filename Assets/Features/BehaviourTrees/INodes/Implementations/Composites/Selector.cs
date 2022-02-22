@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Features.BehaviourTrees;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.Composites
 {
     public class Selector : NodeCollectionDecorator
     {

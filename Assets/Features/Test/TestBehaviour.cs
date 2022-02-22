@@ -1,5 +1,10 @@
-﻿using BehaviourTrees;
-using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees;
+using Features.BehaviourTrees.Common;
+using Features.BehaviourTrees.INodes;
+using Features.BehaviourTrees.INodes.Implementations.Actions;
+using Features.BehaviourTrees.INodes.Implementations.Composites;
+using Features.BehaviourTrees.INodes.Implementations.DebugNodes;
+using Features.BehaviourTrees.INodes.Implementations.Decorator;
 using UnityEngine;
 
 namespace Features.Test

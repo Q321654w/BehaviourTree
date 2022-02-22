@@ -1,7 +1,7 @@
-﻿using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees.Common;
 using UnityEngine;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.INodes.Implementations.Actions
 {
     public class DelayNode : INode
     {

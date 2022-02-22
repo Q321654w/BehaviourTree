@@ -639,48 +639,111 @@
         </e>
         <e p="Features" t="Include">
           <e p="BehaviourTrees" t="Include">
+            <e p=".idea" t="Include">
+              <e p=".idea.BehaviourThree" t="Include">
+                <e p=".idea" t="Include">
+                  <e p=".idea.BehaviourThree.iml" t="Include" />
+                  <e p=".idea.BehaviourThree.iml.meta" t="Include" />
+                  <e p="contentModel.xml" t="Include" />
+                  <e p="contentModel.xml.meta" t="Include" />
+                  <e p="encodings.xml" t="Include" />
+                  <e p="encodings.xml.meta" t="Include" />
+                  <e p="indexLayout.xml" t="Include" />
+                  <e p="indexLayout.xml.meta" t="Include" />
+                  <e p="modules.xml" t="Include" />
+                  <e p="modules.xml.meta" t="Include" />
+                  <e p="projectSettingsUpdater.xml" t="Include" />
+                  <e p="projectSettingsUpdater.xml.meta" t="Include" />
+                  <e p="workspace.xml" t="Include" />
+                  <e p="workspace.xml.meta" t="Include" />
+                </e>
+                <e p=".idea.meta" t="Include" />
+                <e p="riderModule.iml" t="Include" />
+                <e p="riderModule.iml.meta" t="Include" />
+              </e>
+              <e p=".idea.BehaviourThree.meta" t="Include" />
+            </e>
+            <e p=".idea.meta" t="Include" />
             <e p="BehaviourTree.cs" t="Include" />
+            <e p="BehaviourTree.cs.meta" t="Include" />
             <e p="Common" t="Include">
               <e p="CustomCollider.cs" t="Include" />
+              <e p="CustomCollider.cs.meta" t="Include" />
               <e p="Timer.cs" t="Include" />
+              <e p="Timer.cs.meta" t="Include" />
             </e>
+            <e p="Common.meta" t="Include" />
             <e p="INodes" t="Include">
               <e p="Implementations" t="Include">
                 <e p="Actions" t="Include">
                   <e p="DebugNode.cs" t="Include" />
+                  <e p="DebugNode.cs.meta" t="Include" />
                   <e p="DelayNode.cs" t="Include" />
+                  <e p="DelayNode.cs.meta" t="Include" />
+                  <e p="PlayParticleNode.cs" t="Include" />
+                  <e p="PlayParticleNode.cs.meta" t="Include" />
                 </e>
+                <e p="Actions.meta" t="Include" />
                 <e p="AnimatorNodes" t="Include">
                   <e p="AnimatorBoolChangeNode.cs" t="Include" />
+                  <e p="AnimatorBoolChangeNode.cs.meta" t="Include" />
                   <e p="AnimatorFloatChangeNode.cs" t="Include" />
+                  <e p="AnimatorFloatChangeNode.cs.meta" t="Include" />
                   <e p="AnimatorIntChangeNode.cs" t="Include" />
+                  <e p="AnimatorIntChangeNode.cs.meta" t="Include" />
                   <e p="IValue.cs" t="Include" />
+                  <e p="IValue.cs.meta" t="Include" />
                 </e>
+                <e p="AnimatorNodes.meta" t="Include" />
                 <e p="Composites" t="Include">
                   <e p="NodeCollectionDecorator.cs" t="Include" />
+                  <e p="NodeCollectionDecorator.cs.meta" t="Include" />
                   <e p="Parallel.cs" t="Include" />
+                  <e p="Parallel.cs.meta" t="Include" />
                   <e p="ParallelComplete.cs" t="Include" />
+                  <e p="ParallelComplete.cs.meta" t="Include" />
                   <e p="ParallelSelector.cs" t="Include" />
+                  <e p="ParallelSelector.cs.meta" t="Include" />
                   <e p="Selector.cs" t="Include" />
+                  <e p="Selector.cs.meta" t="Include" />
                   <e p="Sequence.cs" t="Include" />
+                  <e p="Sequence.cs.meta" t="Include" />
                 </e>
+                <e p="Composites.meta" t="Include" />
                 <e p="DebugNodes" t="Include">
                   <e p="CollisionNode.cs" t="Include" />
+                  <e p="CollisionNode.cs.meta" t="Include" />
+                  <e p="EmptyNode.cs" t="Include" />
+                  <e p="EmptyNode.cs.meta" t="Include" />
                 </e>
+                <e p="DebugNodes.meta" t="Include" />
                 <e p="Decorator" t="Include">
                   <e p="BehaviorTreeNode.cs" t="Include" />
+                  <e p="BehaviorTreeNode.cs.meta" t="Include" />
                   <e p="ConstantNode.cs" t="Include" />
+                  <e p="ConstantNode.cs.meta" t="Include" />
                   <e p="InvertedNode.cs" t="Include" />
+                  <e p="InvertedNode.cs.meta" t="Include" />
                   <e p="LoopNode.cs" t="Include" />
+                  <e p="LoopNode.cs.meta" t="Include" />
                   <e p="NodeDecorator.cs" t="Include" />
+                  <e p="NodeDecorator.cs.meta" t="Include" />
                   <e p="TimedNode.cs" t="Include" />
+                  <e p="TimedNode.cs.meta" t="Include" />
                   <e p="WaitUntilFailure.cs" t="Include" />
+                  <e p="WaitUntilFailure.cs.meta" t="Include" />
                   <e p="WaitUntilSuccess.cs" t="Include" />
+                  <e p="WaitUntilSuccess.cs.meta" t="Include" />
                 </e>
+                <e p="Decorator.meta" t="Include" />
               </e>
+              <e p="Implementations.meta" t="Include" />
               <e p="INode.cs" t="Include" />
+              <e p="INode.cs.meta" t="Include" />
               <e p="Status.cs" t="Include" />
+              <e p="Status.cs.meta" t="Include" />
             </e>
+            <e p="INodes.meta" t="Include" />
           </e>
           <e p="Test" t="Include">
             <e p="TestBehaviour.cs" t="Include" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BehaviourTrees
+namespace Features.BehaviourTrees.Common
 {
     public class Timer
     {

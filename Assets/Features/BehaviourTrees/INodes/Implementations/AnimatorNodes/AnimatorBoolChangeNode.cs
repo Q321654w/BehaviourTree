@@ -1,7 +1,6 @@
-﻿using Features.BehaviourTrees;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace MVQ
+namespace Features.BehaviourTrees.INodes.Implementations.AnimatorNodes
 {
     public class AnimatorBoolChangeNode : INode
     {
@@ -9,7 +8,7 @@ namespace MVQ
         private readonly string _sourceId;
         private readonly bool _defaultValue;
         private readonly Animator _animator;
-        
+
         private bool _lastValue;
 
         public AnimatorBoolChangeNode(IValue<bool> value, string sourceId, bool defaultValue, Animator animator)
@@ -23,7 +22,7 @@ namespace MVQ
         public Status ExecutionStatus()
         {
             var changed = _lastValue != _value.Value();
-            return changed ? Status.Idle : Status.Success;
+            return changed ? Status.Success : Status.Running;
         }
 
         public void Enter()

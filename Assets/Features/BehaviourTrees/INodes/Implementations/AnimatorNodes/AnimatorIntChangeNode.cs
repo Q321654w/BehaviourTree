@@ -1,7 +1,6 @@
-﻿using Features.BehaviourTrees;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace MVQ
+namespace Features.BehaviourTrees.INodes.Implementations.AnimatorNodes
 {
     public class AnimatorIntChangeNode : INode
     {
@@ -9,10 +8,11 @@ namespace MVQ
         private readonly string _sourceId;
         private readonly int _defaultValue;
         private readonly Animator _animator;
-        
+
         private int _lastValue;
 
-        public AnimatorIntChangeNode(IValue<int> value, string animationId, Animator animator) : this(value, animationId, 0, animator)
+        public AnimatorIntChangeNode(IValue<int> value, string animationId, Animator animator) : this(value,
+            animationId, 0, animator)
         {
         }
 
@@ -27,7 +27,7 @@ namespace MVQ
         public Status ExecutionStatus()
         {
             var changed = _lastValue != _value.Value();
-            return changed ? Status.Idle : Status.Success;
+            return changed ? Status.Success : Status.Running;
         }
 
         public void Enter()
