@@ -1,6 +1,6 @@
-﻿﻿﻿ using Features.BehaviourTrees;
+﻿using Features.BehaviourTrees;
 
-   namespace BehaviourTrees
+namespace BehaviourTrees
 {
     public class ConstantNode : INode
     {
@@ -18,17 +18,14 @@
 
         public void Enter()
         {
-            
         }
 
         public void Execute()
         {
-           
         }
 
         public void Exit()
         {
-            
         }
     }
 }

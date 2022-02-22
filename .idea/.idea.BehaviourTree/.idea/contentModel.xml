@@ -640,34 +640,43 @@
         <e p="Features" t="Include">
           <e p="BehaviourTrees" t="Include">
             <e p="BehaviourTree.cs" t="Include" />
+            <e p="Common" t="Include">
+              <e p="CustomCollider.cs" t="Include" />
+              <e p="Timer.cs" t="Include" />
+            </e>
             <e p="INodes" t="Include">
               <e p="Implementations" t="Include">
+                <e p="Actions" t="Include">
+                  <e p="DebugNode.cs" t="Include" />
+                  <e p="DelayNode.cs" t="Include" />
+                </e>
                 <e p="AnimatorNodes" t="Include">
                   <e p="AnimatorBoolChangeNode.cs" t="Include" />
                   <e p="AnimatorFloatChangeNode.cs" t="Include" />
                   <e p="AnimatorIntChangeNode.cs" t="Include" />
                   <e p="IValue.cs" t="Include" />
                 </e>
-                <e p="BehaviorTreeNode.cs" t="Include" />
-                <e p="DebugNodes" t="Include">
-                  <e p="CollisionNode.cs" t="Include" />
-                  <e p="ConstantNode.cs" t="Include" />
-                  <e p="CustomCollider.cs" t="Include" />
-                  <e p="DebugNode.cs" t="Include" />
-                </e>
-                <e p="DelayNode.cs" t="Include" />
-                <e p="InvertedNode.cs" t="Include" />
-                <e p="LoopNode.cs" t="Include" />
-                <e p="NodeCollections" t="Include">
+                <e p="Composites" t="Include">
                   <e p="NodeCollectionDecorator.cs" t="Include" />
+                  <e p="Parallel.cs" t="Include" />
+                  <e p="ParallelComplete.cs" t="Include" />
+                  <e p="ParallelSelector.cs" t="Include" />
                   <e p="Selector.cs" t="Include" />
                   <e p="Sequence.cs" t="Include" />
                 </e>
-                <e p="NodeDecorator.cs" t="Include" />
-                <e p="TimedNode.cs" t="Include" />
-                <e p="Timer.cs" t="Include" />
-                <e p="WaitUntilFailure.cs" t="Include" />
-                <e p="WaitUntilSuccess.cs" t="Include" />
+                <e p="DebugNodes" t="Include">
+                  <e p="CollisionNode.cs" t="Include" />
+                </e>
+                <e p="Decorator" t="Include">
+                  <e p="BehaviorTreeNode.cs" t="Include" />
+                  <e p="ConstantNode.cs" t="Include" />
+                  <e p="InvertedNode.cs" t="Include" />
+                  <e p="LoopNode.cs" t="Include" />
+                  <e p="NodeDecorator.cs" t="Include" />
+                  <e p="TimedNode.cs" t="Include" />
+                  <e p="WaitUntilFailure.cs" t="Include" />
+                  <e p="WaitUntilSuccess.cs" t="Include" />
+                </e>
               </e>
               <e p="INode.cs" t="Include" />
               <e p="Status.cs" t="Include" />

@@ -1,0 +1,55 @@
+﻿using System.Collections.Generic;
+using Features.BehaviourTrees;
+
+namespace BehaviourTrees
+{
+    public class ParallelComplete : NodeCollectionDecorator
+    {
+        private Status _status;
+
+        public ParallelComplete(IEnumerable<INode> nodes) : base(nodes)
+        {
+        }
+
+        public override Status ExecutionStatus()
+        {
+            return _status;
+        }
+
+        public override void Enter()
+        {
+            _status = Status.Running;
+
+            foreach (var node in Nodes)
+                node.Enter();
+        }
+
+        public override void Execute()
+        {
+            var enumerator = Nodes.GetEnumerator();
+            var status = Status.Success;
+            
+            while (enumerator.MoveNext())
+            {
+                var currentNode = enumerator.Current;
+                var currentNodeStatus = currentNode.ExecutionStatus();
+
+                if (currentNodeStatus != Status.Success && currentNodeStatus != Status.Failure) 
+                    continue;
+                
+                _status = currentNodeStatus;
+                break;
+            }
+        }
+
+        public override void Exit()
+        {
+            foreach (var node in Nodes)
+            {
+                node.Exit();
+            }
+
+            _status = Status.Idle;
+        }
+    }
+}
